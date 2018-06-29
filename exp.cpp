@@ -20,14 +20,14 @@ static string& geneSeq(string& s, unsigned int length) {
 	return s;
 }
 
+static const unsigned int lengths[] = {5, 6, 7, 8, 20, 40, 100, 500, 1000, 5000};
+static const int group_num = sizeof(lengths) / sizeof(unsigned int);
 static const int patch_size = 5;
 
 int main() {
 	srand((unsigned int)time(NULL));
 
 	string X, Y;
-	const unsigned int lengths[] = {5, 6, 7, 8, 20, 40, 100, 500, 1000, 5000};
-	const int group_num = sizeof(lengths) / sizeof(unsigned int);
 	unsigned int timeCost[2][group_num];
 	unsigned int sum[2];
 	int i, j;
